@@ -9,11 +9,9 @@ function App() {
 
   useEffect(() => {
     fetch("http://localhost:5000/notes")
-      // fetch("data.json")
       .then((res) => res.json())
       .then((data) => setNotes(data));
   }, []);
-
   const handleSearch = (e) => {
     e.preventDefault();
     const searchText = e.target.searchText.value;
